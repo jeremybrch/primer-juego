@@ -1,16 +1,16 @@
-import './App.css'
-import { HangImagen } from './componentes/HangImage'
-
+import { HangImagen} from './componentes.tsx/HangImage'
 import {letters} from './helpers/letters'
-export function App() {
+
+import './App.css'
+
+function App () {
+
 
   return(
-  <div className='app'>
+    <div className='App'>
     
     {/*imagen*/}
-    <h3>
-      <HangImagen/>
-    </h3>
+    <HangImagen imageNumber={8}  />
 
     {/*palabra oculta*/}
       <h3>
@@ -29,9 +29,9 @@ export function App() {
           key ={letter}>{ letter }
         </button>
       ))
-     }
+    }
   </div>
         )
-}
+    }
 
 export default App

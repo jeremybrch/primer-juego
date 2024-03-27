@@ -1,13 +1,13 @@
-import image0 from '.assets/0.png'
-import image1 from '..assets/1.png'
-import image2 from '..assets/2.png'
-import image3 from '..assets/3.png'
-import image4 from '..assets/4.png'
-import image5 from '..assets/5.png'
-import image6 from '..assets/6.png'
-import image7 from '..assets/7.png'
-import image8 from '..assets/8.png'
-import image9 from '..assets/9.png'
+import image0 from '../assets.tsx/0.png'
+import image1 from '../assets.tsx/1.png'
+import image2 from '../assets.tsx/2.png'
+import image3 from '../assets.tsx/3.png'
+import image4 from '../assets.tsx/4.png'
+import image5 from '../assets.tsx/5.png'
+import image6 from '../assets.tsx/6.png'
+import image7 from '../assets.tsx/7.png'
+import image8 from '../assets.tsx/8.png'
+import image9 from '../assets.tsx/9.png'
 
 const images : string[] = [
     image0,
@@ -22,8 +22,20 @@ const images : string[] = [
     image9,
 ]
 
-export function HangImagen () {
+
+interface Props {
+    imageNumber: number
+}
+
+export function HangImagen ( {imageNumber} : Props) {
+
+    if (imageNumber > 9){
+        imageNumber = 9;
+    }
+
     return (
-        <img src={images [0] } alt='HangImagen'/>
+        <img src={images[imageNumber] }
+         alt='HangImagen'
+         style={{width: 250}}/>
     )
 }
