@@ -1,37 +1,29 @@
-import { HangImagen} from './componentes.tsx/HangImage'
-import {letters} from './helpers/letters'
+let words: string [] = [
+  'COMPUTADORA',
+  'TELEFONO',
+  'COCINA',
+  'TELEVISOR',
+  'AGUA',
+  'PALABRA',
+  'JUEGO',
+  'MENSAJE',
+  'INTERNET',
+  'CODIGO',
+  'OCULTO',
+  'LOGICA',
+  'IMAGENES',
+  'LETRAS',
+  'AHORCADO',
+  'RATON',
+]
 
-import './App.css'
-
-function App () {
 
 
-  return(
-    <div className='App'>
-    
-    {/*imagen*/}
-    <HangImagen imageNumber={8}  />
+export function getRandonWord (){
 
-    {/*palabra oculta*/}
-      <h3>
-        _ _ _ _ _ _ _ _ _ _ _ _ _ _
-      </h3>
+  const randomIndex = Math.floor( Math.random() * words.length )
 
-    {/*contador de intentos*/}
-    <h3>
-      intentos: 0
-    </h3>
 
-    {/*botones de letras*/}
-     {
-      letters.map( (letter) => (
-        <button
-          key ={letter}>{ letter }
-        </button>
-      ))
-    }
-  </div>
-        )
-    }
+  return words[randomIndex]
 
-export default App
+}
