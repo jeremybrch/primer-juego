@@ -1,6 +1,6 @@
 let words: string [] = [
     'COMPUTADORA',
-    'TELEFIONO',
+    'TELEFONO',
     'COCINA',
     'TELEVISOR',
     'AGUA',
